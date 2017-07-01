@@ -17,10 +17,10 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
+[image0]: ./report_img/dataset.png "Dataset"
 [image1]: ./report_img/grayscale.jpg "Before"
 [image2]: ./report_img/normalize.jpg "Grayscaling"
 [image3]: ./report_img/internet.jpg "Normalizing"
-
 
 ---
 ###Writeup / README
@@ -52,6 +52,9 @@ Validation is used to verify the model and will be used to get the accuracy up. 
 
 ####2. Include an exploratory visualization of the dataset.
 
+![alt text][image0]
+
+Obviously, training set is blue, testing set is green, validation set is red
 
 ###Design and Test a Model Architecture
 
