@@ -17,10 +17,10 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image0]: ./report_img/dataset.png "Dataset"
-[image1]: ./report_img/grayscale.jpg "Before"
-[image2]: ./report_img/normalize.jpg "Grayscaling"
-[image3]: ./report_img/internet.jpg "Normalizing"
+[image0]: ./report_images/dataset.png "Dataset"
+[image1]: ./report_images/grayscaled.jpg "Grayscaling"
+[image2]: ./report_images/normalized.jpg "Normalizing"
+[image3]: ./report_images/internet.jpg "Normalizing"
 
 ---
 ###Writeup / README
@@ -120,8 +120,8 @@ I finally trained the model and saved it.
 
 My final model results were:
 * training set accuracy of 99.6%
-* validation set accuracy of 95.8%
-* test set accuracy of 94.4%
+* validation set accuracy of 96.8%
+* test set accuracy of 95.0%
 
 In the end, the LeNet architecture is working well. The dropout made it robust to change.
 
@@ -144,12 +144,12 @@ Here are the results of the prediction:
 | Pedestrians      		| Turn Left Ahead   									| 
 | Turn Right Ahead     			| Turn Right Ahead 										|
 | Yield					| Yield											|
-| STOP	      		| No passing					 				|
+| STOP	      		| Priority Road					 				|
 | Road work			| Road work      							|
-| Speed limit (30km/h)			| No entry     							|
+| Speed limit (30km/h)			| Slippery road     							|
 | No entry			| Speed limit (100km/h)      							|
-| Speed limit (70km/h)			| Turn Right Ahead      							|
-| Go straight or right			| Priority Road     							|
+| Speed limit (70km/h)			| Speed limit (30km/h)      							|
+| Go straight or right			| Turn right ahead     							|
 | Priority road			| Priority road      							|
 
 The model was able to correctly guess 4 of the 10 traffic signs, which gives an accuracy of 40%. 
@@ -164,19 +164,19 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 | Probability			        |     Prediction	        					                   | Result |
 |:---------------------:|:---------------------------------------------:| :-------:|
-| 0.9996      		| Turn Left Ahead   									| Wrong
+| 0.5804      		| Turn Left Ahead   									| Wrong
 | 1.0000    			| Turn Right Ahead 										| Right
 | 1.0000					| Yield											| Right
-| 0.5811	      		| No passing					 				| Wrong
+| 1.0000	      		| Priority Road					 				| Wrong
 | 1.0000			| Road work      							| Right
-| 0.2495			| No entry     							| Wrong
-| 0.9900			| Speed limit (100km/h)      							| Wrong
-| 0.8982			| Turn Right Ahead      							| Wrong
-| 0.9939			| Priority Road     							| Wrong
+| 0.2209			| Slippery road     							| Wrong
+| 0.4874			| Speed limit (100km/h)      							| Wrong
+| 0.4015			| Speed limit (30km/h)      							| Wrong
+| 0.9997			| Turn right ahead     							| Wrong
 | 1.0000		| Priority road      							| Right
 
 
-When the prediction is 99% or 100%, it is always right. Except for the speed limit (100 km/h) that was wrong with 99% chance to be right. That makes me wonder why...
+When the prediction is 99% or 100%, it is always right. Except for the Priority Road that was wrong with 100% chance to be right. That makes me wonder why...
 Generally, when it is wrong, it gives very low percentage to the actual sign.
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
