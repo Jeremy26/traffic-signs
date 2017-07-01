@@ -15,6 +15,13 @@ The goals / steps of this project are the following:
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
+[//]: # (Image References)
+
+[image1]: ./report_images/grayscale.jpg "Before"
+[image2]: ./report_images/normalize.jpg "Grayscaling"
+[image3]: ./report_images/internet.jpg "Normalizing"
+
+
 ---
 ###Writeup / README
 
@@ -45,9 +52,6 @@ Validation is used to verify the model and will be used to get the accuracy up. 
 
 ####2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set.
-
-![alt text][image1]
 
 ###Design and Test a Model Architecture
 
@@ -59,10 +63,12 @@ When training a model, there is an important part called preprocessing. I used t
 
 Here is an example of a traffic sign image before and after grayscaling.
 
-![alt text][image2]
-![alt text][image3]
+![alt text][image1]
+
 
 As a last step, I normalized the image data because I wanted to have values in the same range. This help having good weights and biases/
+After normalizing, the image (grayscaled first) is :
+![alt text][image2]
 
 I did not augment my training set because I didn't think it was needed. Looking at the final solution (with the internet files), I think that could have helped getting better percentage.
 
@@ -122,10 +128,7 @@ In the end, the LeNet architecture is working well. The dropout made it robust t
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
-![alt text][image9] ![alt text][image10] ![alt text][image11] 
-![alt text][image12] ![alt text][image13]
+![alt text][image3]
 
 These images should be okay to classify. Maybe the 70km/h will give difficulties due to the zoom out.
 
