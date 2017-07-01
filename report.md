@@ -18,9 +18,9 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image0]: ./report_images/dataset.png "Dataset"
-[image1]: ./report_images/grayscaled.jpg "Grayscaling"
-[image2]: ./report_images/normalized.jpg "Normalizing"
-[image3]: ./report_images/internet.jpg "Normalizing"
+[image1]: ./report_images/grayscaled.png "Grayscaling"
+[image2]: ./report_images/normalized.png "Normalizing"
+[image3]: ./report_images/internet.png "Normalizing"
 
 ---
 ###Writeup / README
