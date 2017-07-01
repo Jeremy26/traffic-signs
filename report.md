@@ -17,9 +17,9 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./report_images/grayscale.jpg "Before"
-[image2]: ./report_images/normalize.jpg "Grayscaling"
-[image3]: ./report_images/internet.jpg "Normalizing"
+[image1]: ./report_img/grayscale.jpg "Before"
+[image2]: ./report_img/normalize.jpg "Grayscaling"
+[image3]: ./report_img/internet.jpg "Normalizing"
 
 
 ---
@@ -179,4 +179,4 @@ Generally, when it is wrong, it gives very low percentage to the actual sign.
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 ####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
 
-
+Would love to see a solution for this.
