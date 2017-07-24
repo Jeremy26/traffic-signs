@@ -23,7 +23,7 @@ The goals / steps of this project are the following:
 [image3]: ./report_images/internet.png "Normalizing"
 
 ---
-###Writeup / README
+### Writeup / README
 
 This README file will explain how to understand the project.
 On the GitHub repositery you're in, you can see multiple directories and files: 
@@ -34,9 +34,9 @@ That's it ! I did not include the dataset because it is way too heavy and the co
 
 Concerning the README, You're reading it! and here is a link to my project (https://github.com/Jeremy26/traffic-signs/blob/master/Traffic_Sign_Classifier.ipynb)
 
-###Data Set Summary & Exploration
+### Data Set Summary & Exploration
 
-####1. DATA SET SUMMARY
+#### 1. DATA SET SUMMARY
 You can see it more clearly on the code, but the dataset (51839 images) includes three subsets :
 * Training files, which correspond approximately to 67% of the whole dataset
 * Validation files, about 9% of the dataset
@@ -50,15 +50,15 @@ Validation is used to verify the model and will be used to get the accuracy up. 
 * The shape of a traffic sign image is (32,32,3)
 * The number of unique classes/labels in the data set is 43
 
-####2. Include an exploratory visualization of the dataset.
+#### 2. Include an exploratory visualization of the dataset.
 
 ![alt text][image0]
 
 Obviously, training set is blue, testing set is green, validation set is red
 
-###Design and Test a Model Architecture
+### Design and Test a Model Architecture
 
-####1. PREPROCESSING
+#### 1. PREPROCESSING
 
 When training a model, there is an important part called preprocessing. I used two proprocessing techniques :
 * Grayscale
@@ -75,7 +75,7 @@ After normalizing, the image (grayscaled first) is :
 
 I did not augment my training set because I didn't think it was needed. Looking at the final solution (with the internet files), I think that could have helped getting better percentage.
 
-####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
+#### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
 My final model consisted of 5 layers:
 
@@ -104,7 +104,7 @@ My final model consisted of 5 layers:
 
 We now have our 43 possible outputs from a 32x32x1 image !
 
-####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+#### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 You could notice I used two times dropout function in my architecture. It really made my network more robust and increased the probability from 1 to 2% each time I used it. I didn't want to use it more not to destroy too much of the network.
 The parameters taken were :
@@ -116,7 +116,7 @@ The parameters taken were :
 
 I finally trained the model and saved it.
 
-####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+#### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
 * training set accuracy of 99.6%
@@ -125,9 +125,9 @@ My final model results were:
 
 In the end, the LeNet architecture is working well. The dropout made it robust to change.
 
-###Test a Model on New Images
+### Test a Model on New Images
 
-####1. 10 INTERNET SIGNS
+#### 1. 10 INTERNET SIGNS
 
 Here are five German traffic signs that I found on the web:
 
@@ -135,7 +135,7 @@ Here are five German traffic signs that I found on the web:
 
 These images should be okay to classify. Maybe the 70km/h will give difficulties due to the zoom out.
 
-####2. PREDICTIONS ANALYSIS
+#### 2. PREDICTIONS ANALYSIS
 
 Here are the results of the prediction:
 
@@ -156,7 +156,7 @@ The model was able to correctly guess 4 of the 10 traffic signs, which gives an 
 This compares not favorably to the accuracy on the test set of 94%.
 I think the problem is in the data augmentation, needed.
 
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 The code for making predictions on my final model is located in the 27th cell of the Ipython notebook.
 
